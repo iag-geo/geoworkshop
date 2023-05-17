@@ -3,7 +3,9 @@
 # --------------------------------------------------------------------------------------------------------------------
 
 ENV_NAME=geoworkshop
-PYTHON_VERSION="3.9"  # QGIS only supports up to Python 3.9
+PYTHON_VERSION="3.11"
+
+# Note: QGIS only supports up to Python 3.9
 
 # --------------------------------------------------------------------------------------------------------------------
 
@@ -33,7 +35,7 @@ conda config --env --set channel_priority strict
 conda activate ${ENV_NAME}
 
 # install geospatial packages and restart env
-conda install -y -c conda-forge qgis leafmap psycopg
+conda install -y -c conda-forge leafmap geopandas localtileserver keplergl pydeck psycopg jupyter_contrib_nbextensions
 conda activate ${ENV_NAME}
 
 ## additional package requiring pip
