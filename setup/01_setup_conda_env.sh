@@ -1,11 +1,13 @@
 #!/usr/bin/env bash
 
+# build leafmap based Python environment for workshop notebooks
+
 # --------------------------------------------------------------------------------------------------------------------
 
 ENV_NAME=geoworkshop
-PYTHON_VERSION="3.11"
+PYTHON_VERSION="3.10"
 
-# Note: QGIS only supports up to Python 3.9
+# Note: If you want to install QGIS via Conda - it only supports up to Python 3.9
 
 # --------------------------------------------------------------------------------------------------------------------
 
@@ -35,7 +37,7 @@ conda config --env --set channel_priority strict
 conda activate ${ENV_NAME}
 
 # install geospatial packages and restart env
-conda install -y -c conda-forge leafmap geopandas localtileserver keplergl pydeck psycopg jupyter_contrib_nbextensions
+conda install -y -c conda-forge leafmap geopandas localtileserver keplergl pydeck sqlalchemy psycopg jupyter_contrib_nbextensions
 conda activate ${ENV_NAME}
 
 ## additional package requiring pip
