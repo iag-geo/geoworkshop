@@ -39,7 +39,7 @@ conda activate ${ENV_NAME}
 # install geospatial packages and restart env
 conda install -y geopandas
 conda install -y -c conda-forge mamba
-mamba install -y -c conda-forge leafmap sqlalchemy psycopg2
+mamba install -y -c conda-forge leafmap=0.23.4 sqlalchemy psycopg2
 #conda install -y -c conda-forge leafmap geopandas localtileserver keplergl pydeck sqlalchemy psycopg jupyter_contrib_nbextensions
 conda activate ${ENV_NAME}
 
